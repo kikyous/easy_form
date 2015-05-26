@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.name        = 'easy_form'
   s.version     = EasyForm::VERSION
   s.date        = '2015-05-26'
-  s.summary     = "A simple form builder gem"
-  s.description = "A simple form builder gem"
+  s.summary     = "form builder without complex dsl"
+  s.description = "form builder without complex dsl"
   s.authors     = ["kikyous"]
   s.email       = 'kikyous@163.com'
   s.files       = ["lib/easy_form.rb", 'lib/generators/initializer_generator.rb']

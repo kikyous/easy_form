@@ -1,7 +1,7 @@
 EasyForm
 ===
 
-> easy form builder without any limitation.
+> form builder without complex dsl
 
 turn
 
@@ -53,9 +53,13 @@ or globally:
 Install
 ==
 
-`gem 'easy_form'`
+`gem 'easy_form', github: 'kikyous/easy_form'`
 
-`rails g easy_form:view`
+
+```
+bundle
+rails g easy_form:view
+```
 
 Method and object in template
 ==
