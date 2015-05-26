@@ -53,7 +53,7 @@ or globally:
 Install
 ==
 
-`gem easy_form`
+`gem 'easy_form'`
 
 `rails g easy_form:view`
 
