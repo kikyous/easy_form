@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for='<%= "#{builder.object_name}_#{field}" %>'>
+    <%= "#{'*' if required? } #{label_text}" %>
+  </label>
+  <%= input %>
+</div>
