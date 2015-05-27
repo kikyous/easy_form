@@ -1,10 +1,11 @@
 module EasyForm
   class Field
     attr_accessor :builder, :type, :options, :args
-    def initialize(builder, args)
+    def initialize(builder, args, &block)
       @builder = builder
       @options = args.extract_options!
-      @args = args
+      @args    = args
+      @block   = block
     end
 
     def field
@@ -16,7 +17,7 @@ module EasyForm
     end
 
     def input
-      builder.send(*args, options)
+      builder.send(*args, options, &@block)
     end
 
     def required?
