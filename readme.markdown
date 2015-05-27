@@ -64,6 +64,10 @@ rails g easy_form:view
 ```erb
 <%= f.field :text_area, :content %>
 <%= f.field :collection_check_boxes, :category_ids, Category.all, :id, :name %>
+<%= f.field :collection_check_boxes, :category_ids, Category.all, :id, :name do |b| %>
+  <% b.label { b.check_box } %>
+<% end %>
+
 <%= f.field :collection_select, :user_id, User.all, :id, :name %>
 
 ```
