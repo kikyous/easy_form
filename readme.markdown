@@ -1,7 +1,6 @@
 EasyForm
 ===
-
-> form builder without complex dsl
+### form builder without complex dsl
 
 turn
 
@@ -20,11 +19,13 @@ into
 output:
 
 ```html
+<div class='row'>
   <div class="large-12 columns">
     <label>* Title
       <input type="text" value="" name="article[title]" id="article_title">
     </label>
   </div>
+</div>
 ```
 template above:
 
@@ -50,8 +51,7 @@ or globally:
 ```ruby
 <%= form_for @article, template: 'bootstrap' %>
 ```
-Install
-==
+###Install
 
 `gem 'easy_form', github: 'kikyous/easy_form'`
 
@@ -60,9 +60,16 @@ Install
 bundle
 rails g easy_form:view
 ```
+###More example
+```erb
+<%= f.field :text_area, :content %>
+<%= f.field :collection_check_boxes, :category_ids, Category.all, :id, :name %>
+<%= f.field :collection_select, :user_id, User.all, :id, :name %>
 
-Method and object in template
-==
+```
+
+###Method and object in template
+
 - input  (input tag generated with rails form builder)
 - field  (field, such as :title)
 - label_text (text display as label)
