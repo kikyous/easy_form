@@ -21,19 +21,19 @@ module EasyForm
     end
 
     def required?
-      model.validators_on(field).any?{ActiveRecord::Validations::PresenceValidator}
+      field && model.validators_on(field).any?{ActiveRecord::Validations::PresenceValidator}
     end
 
     def label_text
-      field.to_s.humanize
-    end
-
-    def template_name
-      builder.options[:template] || options[:template] || :default
+      options[:label] || field.to_s.humanize
     end
 
     def to_s
       EasyForm::Template.render(template_name, binding)
+    end
+
+    def template_name
+      builder.options[:template] || options[:template] || :default
     end
   end
 end
