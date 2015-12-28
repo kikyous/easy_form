@@ -53,7 +53,7 @@ or globally:
 ```
 ###Install
 
-`gem 'easy_form', github: 'kikyous/easy_form'`
+`gem 'easy_form'`
 
 
 ```
