@@ -16,8 +16,8 @@ module EasyForm
       builder.object.class
     end
 
-    def input
-      builder.send(*args, options, &@block)
+    def input(options={})
+      builder.send(*args, @options.merge(options), &@block)
     end
 
     def required?

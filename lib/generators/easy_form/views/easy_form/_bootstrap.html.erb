@@ -2,5 +2,5 @@
   <label for='<%= "#{builder.object_name}_#{field}" %>'>
     <%= "#{'*' if required? } #{label_text}" %>
   </label>
-  <%= input %>
+  <%= input(class: 'form-control') %>
 </div>

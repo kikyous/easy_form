@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "form builder without complex dsl"
   s.authors     = ["kikyous"]
   s.email       = 'kikyous@163.com'
-  s.files       = ["lib/easy_form.rb"]
+  s.files       = `git ls-files`.split('\n')
   s.homepage    = 'https://github.com/kikyous/easy_form'
   s.license     = 'MIT'
 end
