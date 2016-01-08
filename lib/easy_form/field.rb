@@ -25,7 +25,7 @@ module EasyForm
     end
 
     def label_text
-      options[:label] || field.to_s.humanize
+      options[:label] || model.human_attribute_name(field)
     end
 
     def to_s
