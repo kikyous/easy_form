@@ -17,7 +17,7 @@ module EasyForm
     end
 
     def input(options={})
-      builder.send(*args, @options.merge(options), &@block)
+      builder.send(*args, self.class.class_merge(@options, options), &@block)
     end
 
     def required?
@@ -34,6 +34,13 @@ module EasyForm
 
     def template_name
       builder.options[:template] || options[:template] || :default
+    end
+
+    def self.class_merge(h1, h2)
+      if h2[:class]
+        h2[:class] << ' ' <<  h1[:class].to_s
+      end
+      h1.merge(h2)
     end
   end
 end
