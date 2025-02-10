@@ -38,7 +38,7 @@ module EasyForm
 
     def self.class_merge(h1, h2)
       if h2[:class]
-        h2[:class] << ' ' <<  h1[:class].to_s
+        h2[:class] = "#{h2[:class]} #{h1[:class]}"
       end
       h1.merge(h2)
     end
